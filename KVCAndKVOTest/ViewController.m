@@ -44,12 +44,38 @@
     self.student = student;
 
     [self.firstNameField becomeFirstResponder];
+    
+    [self.student addObserver: self forKeyPath: @"firstName" options: NSKeyValueObservingOptionNew context: nil];
+    [self.student addObserver: self forKeyPath: @"lastName" options: NSKeyValueObservingOptionNew context: nil];
+    [self.student addObserver: self forKeyPath: @"dateOfBirthday" options: NSKeyValueObservingOptionNew context: nil];
+    [self.student addObserver: self forKeyPath: @"gender" options: NSKeyValueObservingOptionNew context: nil];
+    [self.student addObserver: self forKeyPath: @"grade" options: NSKeyValueObservingOptionNew context: nil];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Observing
+
+- (void) observeValueForKeyPath: (NSString *) keyPath ofObject: (id) object change: (NSDictionary *) change context: (void *) context {
+    
+     if ([keyPath isEqualToString: @"firstName"]) {
+         NSLog(@"New firstName: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+     } else if ([keyPath isEqualToString: @"lastName"]) {
+         NSLog(@"New lastName: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+     } else if ([keyPath isEqualToString: @"dateOfBirthday"]) {
+         NSLog(@"New dateOfBirthday: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+     } else if ([keyPath isEqualToString: @"gender"]) {
+         NSLog(@"New gender: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+     } else if ([keyPath isEqualToString: @"grade"]) {
+         NSLog(@"New grade: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+     } else {
+         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+     }
+
 }
 
 #pragma mark - Actions
