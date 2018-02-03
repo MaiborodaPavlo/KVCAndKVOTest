@@ -15,6 +15,7 @@
 		E911249220260D0D003DC9D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249120260D0D003DC9D5 /* main.m */; };
 		E911249A20260EAC003DC9D5 /* PMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249920260EAC003DC9D5 /* PMStudent.m */; };
 		E911249D20260F4B003DC9D5 /* NSDate+RandomDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249C20260F4B003DC9D5 /* NSDate+RandomDate.m */; };
+		E91124A0202612D7003DC9D5 /* PMBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249F202612D7003DC9D5 /* PMBirthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		E911249920260EAC003DC9D5 /* PMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMStudent.m; sourceTree = "<group>"; };
 		E911249B20260F4B003DC9D5 /* NSDate+RandomDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+RandomDate.h"; sourceTree = "<group>"; };
 		E911249C20260F4B003DC9D5 /* NSDate+RandomDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RandomDate.m"; sourceTree = "<group>"; };
+		E911249E202612D7003DC9D5 /* PMBirthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMBirthViewController.h; sourceTree = "<group>"; };
+		E911249F202612D7003DC9D5 /* PMBirthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMBirthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				E911248320260D0D003DC9D5 /* AppDelegate.m */,
 				E911248520260D0D003DC9D5 /* ViewController.h */,
 				E911248620260D0D003DC9D5 /* ViewController.m */,
+				E911249E202612D7003DC9D5 /* PMBirthViewController.h */,
+				E911249F202612D7003DC9D5 /* PMBirthViewController.m */,
 				E911248820260D0D003DC9D5 /* Main.storyboard */,
 				E911248B20260D0D003DC9D5 /* Assets.xcassets */,
 				E911248D20260D0D003DC9D5 /* LaunchScreen.storyboard */,
@@ -157,6 +162,7 @@
 				E911249220260D0D003DC9D5 /* main.m in Sources */,
 				E911249A20260EAC003DC9D5 /* PMStudent.m in Sources */,
 				E911248420260D0D003DC9D5 /* AppDelegate.m in Sources */,
+				E91124A0202612D7003DC9D5 /* PMBirthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

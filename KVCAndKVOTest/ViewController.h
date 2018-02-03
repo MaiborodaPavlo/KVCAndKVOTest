@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
+@property (weak, nonatomic) IBOutlet UITextField *birthField;
+@property (weak, nonatomic) IBOutlet UITextField *gradeField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderControl;
+
+- (IBAction)actionGenderChanged:(UISegmentedControl *)sender;
 
 @end
 

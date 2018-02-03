@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum {
     PMGenderMale,
@@ -19,7 +20,7 @@ typedef enum {
 @property (strong, nonatomic) NSString *lastName;
 @property (assign, nonatomic) NSDate *dateOfBirthday;
 @property (assign, nonatomic) PMGender gender;
-@property (assign, nonatomic) NSInteger grade;
+@property (assign, nonatomic) CGFloat grade;
 
 + (PMStudent *) randomStudent;
 
