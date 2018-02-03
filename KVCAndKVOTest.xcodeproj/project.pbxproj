@@ -13,6 +13,8 @@
 		E911248C20260D0D003DC9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911248B20260D0D003DC9D5 /* Assets.xcassets */; };
 		E911248F20260D0D003DC9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E911248D20260D0D003DC9D5 /* LaunchScreen.storyboard */; };
 		E911249220260D0D003DC9D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249120260D0D003DC9D5 /* main.m */; };
+		E911249A20260EAC003DC9D5 /* PMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249920260EAC003DC9D5 /* PMStudent.m */; };
+		E911249D20260F4B003DC9D5 /* NSDate+RandomDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E911249C20260F4B003DC9D5 /* NSDate+RandomDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E911248E20260D0D003DC9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E911249020260D0D003DC9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E911249120260D0D003DC9D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E911249820260EAC003DC9D5 /* PMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMStudent.h; sourceTree = "<group>"; };
+		E911249920260EAC003DC9D5 /* PMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMStudent.m; sourceTree = "<group>"; };
+		E911249B20260F4B003DC9D5 /* NSDate+RandomDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+RandomDate.h"; sourceTree = "<group>"; };
+		E911249C20260F4B003DC9D5 /* NSDate+RandomDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RandomDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 		E911248120260D0D003DC9D5 /* KVCAndKVOTest */ = {
 			isa = PBXGroup;
 			children = (
+				E911249B20260F4B003DC9D5 /* NSDate+RandomDate.h */,
+				E911249C20260F4B003DC9D5 /* NSDate+RandomDate.m */,
+				E911249820260EAC003DC9D5 /* PMStudent.h */,
+				E911249920260EAC003DC9D5 /* PMStudent.m */,
 				E911248220260D0D003DC9D5 /* AppDelegate.h */,
 				E911248320260D0D003DC9D5 /* AppDelegate.m */,
 				E911248520260D0D003DC9D5 /* ViewController.h */,
@@ -142,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E911249D20260F4B003DC9D5 /* NSDate+RandomDate.m in Sources */,
 				E911248720260D0D003DC9D5 /* ViewController.m in Sources */,
 				E911249220260D0D003DC9D5 /* main.m in Sources */,
+				E911249A20260EAC003DC9D5 /* PMStudent.m in Sources */,
 				E911248420260D0D003DC9D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
