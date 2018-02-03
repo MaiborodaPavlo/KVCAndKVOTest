@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIPopoverPresentationController *popover;
 
 @property (strong, nonatomic) PMStudent *student;
+@property (strong, nonatomic) NSMutableArray *students;
 
 @end
 
@@ -25,6 +26,8 @@
     
     PMStudent *student = [PMStudent randomStudent];
     
+    self.student = student;
+    /*
     self.firstNameField.text = student.firstName;
     self.lastNameField.text = student.lastName;
     
@@ -41,9 +44,8 @@
     
     self.gradeField.text = [NSString stringWithFormat:@"%f", student.grade];
     
-    self.student = student;
-
     [self.firstNameField becomeFirstResponder];
+    */
     
     [self.student addObserver: self forKeyPath: @"firstName" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"lastName" options: NSKeyValueObservingOptionNew context: nil];
@@ -51,8 +53,13 @@
     [self.student addObserver: self forKeyPath: @"gender" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"grade" options: NSKeyValueObservingOptionNew context: nil];
     
+    for (int i = 0; i < 10; i ++) {
+        [self.students addObject: [PMStudent randomStudent]];
+    }
     
-    [self.student removeAllProperties];
+    [self.students addObject: self.student];
+    
+    //[self.student removeAllProperties];
 }
 
 
