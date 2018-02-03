@@ -22,6 +22,8 @@ typedef enum {
 @property (assign, nonatomic) PMGender gender;
 @property (assign, nonatomic) CGFloat grade;
 
+@property (weak, nonatomic) PMStudent *friend;
+
 + (PMStudent *) randomStudent;
 
 - (void) removeAllProperties;

@@ -48,16 +48,31 @@
     */
     
     [self.student addObserver: self forKeyPath: @"firstName" options: NSKeyValueObservingOptionNew context: nil];
-    [self.student addObserver: self forKeyPath: @"lastName" options: NSKeyValueObservingOptionNew context: nil];
+    /*[self.student addObserver: self forKeyPath: @"lastName" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"dateOfBirthday" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"gender" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"grade" options: NSKeyValueObservingOptionNew context: nil];
+    */
+    self.students = [NSMutableArray array];
     
-    for (int i = 0; i < 10; i ++) {
+    for (int i = 0; i < 3; i ++) {
         [self.students addObject: [PMStudent randomStudent]];
     }
     
     [self.students addObject: self.student];
+    
+    for (int i = 0; i < [self.students count]; i++) {
+        if (![[self.students objectAtIndex: i] isEqual: [self.students lastObject]]) {
+            [[self.students objectAtIndex: i] setFriend: [self.students objectAtIndex: i + 1]];
+        } else {
+            [[self.students lastObject] setFriend: [self.students firstObject]];
+        }
+    }
+
+    [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.firstName"];
+    [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.friend.firstName"];
+    [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.friend.friend.firstName"];
+    
     
     //[self.student removeAllProperties];
 }
