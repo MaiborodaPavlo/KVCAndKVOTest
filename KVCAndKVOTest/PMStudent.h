@@ -24,4 +24,6 @@ typedef enum {
 
 + (PMStudent *) randomStudent;
 
+- (void) removeAllProperties;
+
 @end

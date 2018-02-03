@@ -50,6 +50,9 @@
     [self.student addObserver: self forKeyPath: @"dateOfBirthday" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"gender" options: NSKeyValueObservingOptionNew context: nil];
     [self.student addObserver: self forKeyPath: @"grade" options: NSKeyValueObservingOptionNew context: nil];
+    
+    
+    [self.student removeAllProperties];
 }
 
 

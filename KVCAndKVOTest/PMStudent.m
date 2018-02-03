@@ -44,4 +44,28 @@ static int namesCount = 50;
     return student;
 }
 
+- (void) removeAllProperties {
+    
+    [self willChangeValueForKey: @"firstName"];
+    _firstName = @"";
+    [self didChangeValueForKey: @"firstName"];
+    
+    [self willChangeValueForKey: @"lastName"];
+    _lastName = @"";
+    [self didChangeValueForKey: @"lastName"];
+    
+    [self willChangeValueForKey: @"dateOfBirthday"];
+    _dateOfBirthday = nil;
+    [self didChangeValueForKey: @"dateOfBirthday"];
+    
+    [self willChangeValueForKey: @"gender"];
+    _gender = 2;
+    [self didChangeValueForKey: @"gender"];
+    
+    [self willChangeValueForKey: @"grade"];
+    _grade = 0;
+    [self didChangeValueForKey: @"grade"];
+    
+}
+
 @end
