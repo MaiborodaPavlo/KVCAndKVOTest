@@ -55,7 +55,7 @@
     */
     self.students = [NSMutableArray array];
     
-    for (int i = 0; i < 3; i ++) {
+    for (int i = 0; i < 10; i ++) {
         [self.students addObject: [PMStudent randomStudent]];
     }
     
@@ -69,11 +69,30 @@
         }
     }
 
+    /*
     [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.firstName"];
     [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.friend.firstName"];
     [[self.students firstObject] setValue: @"Anton" forKeyPath: @"friend.friend.friend.firstName"];
+    */
     
+    NSArray *namesArray = [self.students valueForKeyPath: @"@distinctUnionOfObjects.firstName"];
     
+    NSLog(@"Names:\n %@", namesArray);
+    
+    NSDate *minYear = [self.students valueForKeyPath: @"@min.dateOfBirthday"];
+    NSDate *maxYear = [self.students valueForKeyPath: @"@max.dateOfBirthday"];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"yyyy"];
+    
+    NSLog(@"%@", [dateFormatter stringFromDate: minYear]);
+    NSLog(@"%@", [dateFormatter stringFromDate: maxYear]);
+    
+    NSNumber *sumGrade = [self.students valueForKeyPath: @"@sum.grade"];
+    NSNumber *avgGrade = [self.students valueForKeyPath: @"@avg.grade"];
+
+    NSLog(@"Sum: %@, Avg: %@", sumGrade, avgGrade);
+
     //[self.student removeAllProperties];
 }
 
